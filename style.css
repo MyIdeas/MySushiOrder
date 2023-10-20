@@ -31,8 +31,6 @@ body {
 }
 
 h1 {
-    position: absolute;
-    top: 0px;
     font-size: 36px;
     margin-bottom: 20px;
 }

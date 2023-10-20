@@ -5,7 +5,7 @@ document.getElementById('submitButton').addEventListener('click', function () {
     if (inputText.trim() === '') {
         document.getElementById('errorMessage').textContent = 'Il campo non può essere vuoto.';
     } else {
-        document.getElementById('errorMessage').textContent = ''; // Cancella il messaggio di errore se il campo è valido
+        document.getElementById('errorMessage').textContent = 'Giulia pigrona'; // Cancella il messaggio di errore se il campo è valido
 
         // Cambia schermata mostrando la "seconda schermata"
         //document.querySelector('.second-screen').style.display = 'block';
