@@ -19,7 +19,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url('https://github.com/MyIdeas/MySushiOrder/blob/ce18b21bc24943c31b1f11b5260e76be0a7d809a/sushi_home.jpg'); /* Inserisci il percorso dell'immagine di sfondo */
+    background-image: url('https://github.com/MyIdeas/MySushiOrder/blob/main/sushi_home.jpg?raw=true'); /* Inserisci il percorso dell'immagine di sfondo */
     background-size: cover;
     opacity: 0.5;
     z-index: -1;
