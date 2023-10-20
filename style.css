@@ -37,7 +37,7 @@ h1 {
 
 .signature {
     position: absolute;
-    bottom: 10px;
+    top: 60px; /* Sposta la firma sotto il titolo con un margine */
     right: 10px;
     font-size: 16px;
     color: #777;
