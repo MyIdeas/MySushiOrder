@@ -1,11 +1,24 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Login Page</title>
 </head>
 <body>
-    <h1>My Title 2</h1>
-    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ducimus similique sed quidem, officia esse libero. Commodi provident eius iusto, id nam eligendi! Incidunt, fugit veritatis labore nam similique obcaecati explicabo.</p>
+    <h1>Login</h1>
+    <form id="login-form">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+        <button type="submit">Login</button>
+    </form>
+    <p id="login-status"></p>
+    <div id="user-info" style="display: none;">
+        <p>Welcome, <span id="user-name"></span>!</p>
+        <button id="logout-button">Logout</button>
+    </div>
+    <script src="app.js"></script>
 </body>
 </html>
