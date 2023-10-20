@@ -9,7 +9,6 @@ document.getElementById('submitButton').addEventListener('click', function () {
 
         // Cambia schermata mostrando la "seconda schermata"
         //document.querySelector('.second-screen').style.display = 'block';
-
         // Puoi inserire qui il codice per la seconda schermata o visualizzazione
    
     }
