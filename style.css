@@ -1,0 +1,49 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('https://github.com/MyIdeas/MySushiOrder/blob/ce18b21bc24943c31b1f11b5260e76be0a7d809a/sushi_home.jpg'); /* Inserisci il percorso dell'immagine di sfondo */
+    background-size: cover;
+    opacity: 0.5;
+    z-index: -1;
+}
+
+.content {
+    text-align: center;
+}
+
+h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+input[type="text"] {
+    padding: 10px;
+    font-size: 16px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #0074d9;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
