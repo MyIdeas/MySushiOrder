@@ -4,27 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>App Con Immagine di Sfondo</title>
+    <title>Registrazione Utente</title>
 </head>
 <body>
     <div class="container">
-        <h1>Sushi and friends Version 2</h1>
-        <div class="signature">By Versa</div>
-        <div class="background-image"></div>
-        <div class="content">
-            <form action="register.php" method="post"> <!-- Form con azione "register.php" -->
-                <input type="text" name="nickname" id="inputField" placeholder="Il tuo nome">
-                <button type="submit" id="submitButton">Vai</button>
-            </form>
-            <p id="errorMessage" class="error-message"></p>
-        </div>
-
-        <div class="second-screen">
-            <h1>Seconda schermata</h1>
-            <!-- Contenuto della seconda schermata -->
-        </div>
-
+        <h1>Registrazione Utente</h1>
+        <form action="register.php" method="post">
+            <label for="nickname">Nickname:</label>
+            <input type="text" name="nickname" id="nickname" required>
+            <button type="submit">Registrati</button>
+        </form>
     </div>
-    <script src="script.js"></script>
 </body>
 </html>
