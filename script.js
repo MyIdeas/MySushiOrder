@@ -16,7 +16,20 @@
     //alert('Hai inserito: ' + inputText);  non mi serve, è il sito che dice con un pop up ma è brutto
 });*/
 
-// Pagina di accesso
+// ... Altre parti del tuo codice ...
+
+// Funzione per mostrare il feedback
+function showFeedback(message, success) {
+    const feedback = document.getElementById("feedback");
+    feedback.textContent = message;
+    feedback.style.color = success ? "green" : "red";
+    feedback.style.display = "block";
+
+    setTimeout(() => {
+        feedback.style.display = "none";
+    }, 3000);  // Nascondi il feedback dopo 3 secondi
+}
+
 // Pagina di accesso
 const loginForm = document.getElementById("loginForm");
 const userName = document.getElementById("name");
@@ -27,25 +40,26 @@ loginForm.addEventListener("submit", (e) => {
     e.preventDefault();
     const name = userName.value;
 
-    // Creiamo un oggetto che rappresenta i dati da inviare al server
     const data = {
         name: name
     };
 
-    // Utilizziamo la funzione fetch() per inviare una richiesta POST al server PHP
-    fetch('https://sql11.freesqldatabase.com:3306/api.php', {
+    fetch('https://sql11.freesqldatabase.com/api.php', {
         method: 'POST',
-        body: JSON.stringify(data),  // Convertiamo l'oggetto in una stringa JSON
+        body: JSON.stringify(data),
         headers: {
-            'Content-Type': 'application/json',  // Specifichiamo il tipo di contenuto
+            'Content-Type': 'application/json',
         },
     })
-    .then(response => response.json())  // Analizziamo la risposta JSON
+    .then(response => response.json())
     .then(data => {
         if (data.success) {
             userName.textContent = name;
             loginForm.style.display = 'none';
             numberForm.style.display = 'block';
+            showFeedback("Accesso riuscito", true);
+        } else {
+            showFeedback("Accesso fallito", false);
         }
     });
 });
@@ -57,24 +71,25 @@ const numberList = document.getElementById("numberList");
 sendNumberButton.addEventListener("click", () => {
     const number = parseInt(numberInput.value);
 
-    // Creiamo un oggetto che rappresenta i dati da inviare al server
     const data = {
         number: number
     };
 
-    // Utilizziamo la funzione fetch() per inviare una richiesta POST al server PHP
     fetch('https://sql11.freesqldatabase.com/api.php', {
         method: 'POST',
-        body: JSON.stringify(data),  // Convertiamo l'oggetto in una stringa JSON
+        body: JSON.stringify(data),
         headers: {
-            'Content-Type': 'application/json',  // Specifichiamo il tipo di contenuto
+            'Content-Type': 'application/json',
         },
     })
-    .then(response => response.json())  // Analizziamo la risposta JSON
+    .then(response => response.json())
     .then(data => {
         if (data.success) {
             numberList.innerHTML += `<li>${number}</li>`;
             numberInput.value = "";
+            showFeedback("Dato inviato con successo", true);
+        } else {
+            showFeedback("Invio del dato fallito", false);
         }
     });
 });
