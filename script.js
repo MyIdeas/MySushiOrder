@@ -63,7 +63,7 @@ sendNumberButton.addEventListener("click", () => {
     };
 
     // Utilizziamo la funzione fetch() per inviare una richiesta POST al server PHP
-    fetch('https://sql11.freesqldatabase.com:3306/api.php', {
+    fetch('https://sql11.freesqldatabase.com/api.php', {
         method: 'POST',
         body: JSON.stringify(data),  // Convertiamo l'oggetto in una stringa JSON
         headers: {
