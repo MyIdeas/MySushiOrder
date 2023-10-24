@@ -1,30 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Web App</title>
+    <title>Login Page</title>
 </head>
 <body>
-    <h1>Benvenuto V3</h1>
-    <form id="loginForm">
-        <label for="name">Nome:</label>
-        <input type="text" id="name" required>
-        <button type="submit">Accedi</button>
+    <h1>Login v1</h1>
+    <form action="process_login.php" method="post">
+        Username: <input type="text" name="username" required>
+        <input type="submit" value="Login">
     </form>
-
-    <div id="numberForm" style="display: none;">
-        <h1>Ciao, <span id="userName"></span>! Inserisci dei numeri:</h1>
-        <form>
-            <label for="number">Numero:</label>
-            <input type="number" id="number" required>
-            <button type="button" id="sendNumber">Invia</button>
-        </form>
-        <ul id="numberList"></ul>
-    </div>
-
-
-    <div id="feedback" style="display: none;"></div>
-
-
-    <script src="script.js"></script>
 </body>
 </html>
