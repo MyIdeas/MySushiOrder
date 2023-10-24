@@ -17,6 +17,7 @@
 });*/
 
 // Pagina di accesso
+// Pagina di accesso
 const loginForm = document.getElementById("loginForm");
 const userName = document.getElementById("name");
 const numberForm = document.getElementById("numberForm");
@@ -26,15 +27,20 @@ loginForm.addEventListener("submit", (e) => {
     e.preventDefault();
     const name = userName.value;
 
-    // Invia il nome al server
-    fetch('https://tuo_server/api.php', {
+    // Creiamo un oggetto che rappresenta i dati da inviare al server
+    const data = {
+        name: name
+    };
+
+    // Utilizziamo la funzione fetch() per inviare una richiesta POST al server PHP
+    fetch('https://sql11.freesqldatabase.com:3306/api.php', {
         method: 'POST',
-        body: JSON.stringify({ name: name }),
+        body: JSON.stringify(data),  // Convertiamo l'oggetto in una stringa JSON
         headers: {
-            'Content-Type': 'application/json',
+            'Content-Type': 'application/json',  // Specifichiamo il tipo di contenuto
         },
     })
-    .then(response => response.json())
+    .then(response => response.json())  // Analizziamo la risposta JSON
     .then(data => {
         if (data.success) {
             userName.textContent = name;
@@ -51,15 +57,20 @@ const numberList = document.getElementById("numberList");
 sendNumberButton.addEventListener("click", () => {
     const number = parseInt(numberInput.value);
 
-    // Invia il numero al server
-    fetch('https://tuo_server/api.php', {
+    // Creiamo un oggetto che rappresenta i dati da inviare al server
+    const data = {
+        number: number
+    };
+
+    // Utilizziamo la funzione fetch() per inviare una richiesta POST al server PHP
+    fetch('https://sql11.freesqldatabase.com:3306/api.php', {
         method: 'POST',
-        body: JSON.stringify({ number: number }),
+        body: JSON.stringify(data),  // Convertiamo l'oggetto in una stringa JSON
         headers: {
-            'Content-Type': 'application/json',
+            'Content-Type': 'application/json',  // Specifichiamo il tipo di contenuto
         },
     })
-    .then(response => response.json())
+    .then(response => response.json())  // Analizziamo la risposta JSON
     .then(data => {
         if (data.success) {
             numberList.innerHTML += `<li>${number}</li>`;
