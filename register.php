@@ -3,7 +3,7 @@
 $servername = "sql11.freesqldatabase.com"; // Sostituisci con il tuo host del database
 $username = "sql11655732"; // Sostituisci con il tuo nome utente del database
 $password = "bZRwqR4UzX"; // Sostituisci con la tua password del database
-$dbname = "Utenti"; // Sostituisci con il nome del tuo database
+$dbname = "sql11655732"; // Sostituisci con il nome del tuo database
 
 $conn = new mysqli($servername, $username, $password, $dbname);
 
