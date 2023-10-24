@@ -8,16 +8,17 @@
 </head>
 <body>
     <div class="container">
-        <h1>Sushi and friends</h1>
+        <h1>Sushi and friends 1</h1>
         <div class="signature">By Versa</div>
         <div class="background-image"></div>
         <div class="content">
-            <input type="text" id="inputField" placeholder="Il tuo nome">
-            <button id="submitButton">Vai</button>
-            <p id="errorMessage" class="error-message"></p> <!-- Aggiunto elemento di avviso -->
+            <form action="register.php" method="post"> <!-- Form con azione "register.php" -->
+                <input type="text" name="nickname" id="inputField" placeholder="Il tuo nome">
+                <button type="submit" id="submitButton">Vai</button>
+            </form>
+            <p id="errorMessage" class="error-message"></p>
         </div>
 
-        <!-- Seconda schermata -->
         <div class="second-screen">
             <h1>Seconda schermata</h1>
             <!-- Contenuto della seconda schermata -->
@@ -27,4 +28,3 @@
     <script src="script.js"></script>
 </body>
 </html>
-
